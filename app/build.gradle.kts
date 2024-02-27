@@ -33,6 +33,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    sourceSets {
+        getByName("main") {
+            res {
+                srcDirs("src\\main\\res", "src\\main\\res\\values-v31")
+            }
+        }
+    }
 }
 
 dependencies {
@@ -44,6 +51,7 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    //splash screen
-    implementation("androidx.core:core-splashscreen:1.0.0")
+
+    //splash screen for 12 v and above
+    implementation("androidx.core:core-splashscreen:1.0.1")
 }
