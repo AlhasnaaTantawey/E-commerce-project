@@ -9,7 +9,7 @@
         <item name="android:statusBarColor">@color/primary_color</item>
         <item name="android:windowLightStatusBar">false</item> <!-- For making status bar content color dark -->
         <item name="android:windowLightNavigationBar">false</item>  <!-- For making Navigation bar content color dark -->
-        <!--        <item name="android:windowSplashScreenBrandingImage">@drawable/brand_logo</item>-->
+                <item name="android:windowSplashScreenBrandingImage">@drawable/launch_background</item>
 
     </style>
 </resources>

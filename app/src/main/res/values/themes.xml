@@ -23,6 +23,7 @@
     <style name="Theme.MainActivity" parent="Base.Theme.ECommerceProject">
         <item name="android:windowBackground">@drawable/launch_background</item>
         <!-- System UI Configurations-->
+
         <item name="android:statusBarColor">@color/primary_color</item>
         <item name="android:windowLightStatusBar">false</item> <!-- For making status bar content color dark -->
         <item name="android:navigationBarColor">@color/primary_color</item>
