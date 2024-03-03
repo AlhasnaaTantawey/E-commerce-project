@@ -1,6 +1,10 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    //firebase
+    id("com.google.gms.google-services")
+    // Add the Crashlytics Gradle plugin
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -54,4 +58,11 @@ dependencies {
 
     //splash screen for 12 v and above
     implementation("androidx.core:core-splashscreen:1.0.1")
+
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.7.3"))
+    implementation("com.google.firebase:firebase-analytics")
+    //crashlytics dependancy
+    implementation("com.google.firebase:firebase-crashlytics")
+
 }

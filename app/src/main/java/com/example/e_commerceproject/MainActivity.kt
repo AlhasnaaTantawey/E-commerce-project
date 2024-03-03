@@ -4,8 +4,11 @@ import android.animation.ObjectAnimator
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.animation.AnticipateInterpolator
+import android.widget.Button
+import android.widget.TextView
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
@@ -14,6 +17,11 @@ class MainActivity : AppCompatActivity() {
         initSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+//        findViewById<TextView>(R.id.textview).setOnClickListener {
+//            Log.d("MainActivity","crash in onclicklistener ")
+//            throw RuntimeException("Test Crash") // Force a crash
+//        }
     }
 
 private  fun initSplashScreen(){
