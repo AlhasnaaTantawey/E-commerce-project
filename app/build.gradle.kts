@@ -65,4 +65,7 @@ dependencies {
     //crashlytics dependancy
     implementation("com.google.firebase:firebase-crashlytics")
 
+    // lib  is used to check in android if user not open internent and this is not apper in android bcZ it is in google play now
+    implementation ("com.github.pwittchen:reactivenetwork-rx2:3.0.8")
+
 }
