@@ -5,6 +5,8 @@ plugins {
     id("com.google.gms.google-services")
     // Add the Crashlytics Gradle plugin
     id("com.google.firebase.crashlytics")
+    //add plugin of data binding and view binding
+    id("kotlin-kapt")
 }
 
 android {
@@ -44,6 +46,11 @@ android {
             }
         }
     }
+//add data binding and view biding
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -67,5 +74,15 @@ dependencies {
 
     // lib  is used to check in android if user not open internent and this is not apper in android bcZ it is in google play now
     implementation ("com.github.pwittchen:reactivenetwork-rx2:3.0.8")
+
+// navigation component
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+
+    // Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.7.7")
+
+
 
 }
