@@ -4,18 +4,10 @@ import android.animation.ObjectAnimator
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.animation.AnticipateInterpolator
-import android.widget.Button
-import android.widget.TextView
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.lifecycle.lifecycleScope
-import com.example.e_commerceproject.utils.AddToCartException
-import com.example.e_commerceproject.utils.CrashlyticsUtils
-import kotlinx.coroutines.Dispatchers.Main
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
