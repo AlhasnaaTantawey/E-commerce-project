@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login_nav"
     app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.e_commerceproject.ui.login.fragments.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login"/>
+
+<!--    <fragment-->
+<!--        android:id="@+id/registerFragment"-->
+<!--        android:name="com.example.e_commerceproject.ui.login.fragments.RegisterFragment"-->
+<!--        android:label="RegisterFragment"-->
+<!--        tools:layout="@layout/fragment_register"/>-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/forgetPassFragment"-->
+<!--        android:name="com.example.e_commerceproject.ui.login.fragments.ForgetPassFragment"-->
+<!--        android:label="ForgetPassFragment"-->
+<!--        tools:layout="@layout/fragment_forget_pass"/>-->
+
 </navigation>

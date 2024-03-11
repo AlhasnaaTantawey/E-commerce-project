@@ -6,15 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.e_commerceproject.R
-import com.example.e_commerceproject.data.reposatory.user.UserPreferenceReposatoryImpl
-import com.example.e_commerceproject.ui.login.viewmodels.LoginViewModel
-
-
-class LoginFragment : Fragment() {
-
-val loginViewModel:LoginViewModel by lazy {
-    LoginViewModel(UserPreferenceReposatoryImpl(requireActivity()))
-}
+class RegisterFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -22,12 +14,12 @@ val loginViewModel:LoginViewModel by lazy {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        return inflater.inflate(R.layout.fragment_register, container, false)
     }
 
     companion object {
-private const val TAG="LoginFragment"
-                }
 
+        private const val TAG="RegisterFragment"
+            }
 
 }

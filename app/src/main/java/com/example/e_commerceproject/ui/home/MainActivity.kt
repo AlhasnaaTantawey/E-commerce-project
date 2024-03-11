@@ -1,4 +1,4 @@
-package com.example.e_commerceproject
+package com.example.e_commerceproject.ui.home
 
 import android.animation.ObjectAnimator
 import android.os.Build
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.animation.AnticipateInterpolator
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.example.e_commerceproject.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
