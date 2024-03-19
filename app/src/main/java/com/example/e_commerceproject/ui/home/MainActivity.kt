@@ -14,6 +14,7 @@ import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
 import com.example.e_commerceproject.R
+import com.example.e_commerceproject.data.datasource.datastore.UserPreferncesDataSource
 import com.example.e_commerceproject.data.reposatory.user.UserPreferenceReposatoryImpl
 import com.example.e_commerceproject.ui.common.viewmodel.UserViewModel
 import com.example.e_commerceproject.ui.login.AuthActivity
@@ -24,7 +25,8 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     private val userViewModel: UserViewModel by viewModels() {
-        UserViewModel.UserViewModelFactory(UserPreferenceReposatoryImpl(this@MainActivity))
+        UserViewModel.UserViewModelFactory(
+            UserPreferenceReposatoryImpl(UserPreferncesDataSource(this@MainActivity)))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -8,25 +8,44 @@
 
         <!-- System UI Configurations-->
         <item name="android:statusBarColor">@color/white</item>
-        <item name="android:windowLightStatusBar">true</item> <!-- For making status bar content color dark -->
+        <item name="android:windowLightStatusBar">true
+        </item> <!-- For making status bar content color dark -->
         <item name="android:navigationBarColor">@android:color/white</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>  <!-- For making Navigation bar content color dark -->n bar content color dark -->
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true
+        </item>  <!-- For making Navigation bar content color dark -->n bar content color dark -->
 
     </style>
 
     <style name="Theme.ECommerceProject" parent="Base.Theme.ECommerceProject" />
 
 
-
-
-<!--    splash screen for less then 12 v-->
+    <!--    splash screen for less then 12 v-->
     <style name="Theme.MainActivity" parent="Base.Theme.ECommerceProject">
         <item name="android:windowBackground">@drawable/launch_background</item>
         <!-- System UI Configurations-->
 
         <item name="android:statusBarColor">@color/primary_color</item>
-        <item name="android:windowLightStatusBar">false</item> <!-- For making status bar content color dark -->
+        <item name="android:windowLightStatusBar">false
+        </item> <!-- For making status bar content color dark -->
         <item name="android:navigationBarColor">@color/primary_color</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>  <!-- For making Navigation bar content color dark -->on bar content color dark -->
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false
+        </item>  <!-- For making Navigation bar content color dark -->on bar content color dark -->
     </style>
+
+
+    <style name="LargeTitleTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_dark_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    android:layout_marginTop="16dp"
+    <style name="meduimTitleTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
 </resources>

@@ -6,18 +6,40 @@
             name="viewmodel"
             type="com.example.e_commerceproject.ui.login.viewmodels.LoginViewModel" />
     </data>
-    <FrameLayout
-
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.login.fragments.LoginFragment">
-
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/login_fragment" />
+            android:orientation="vertical"
+            >
 
-    </FrameLayout>
+            <ImageView
+                android:layout_marginTop="24dp"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/LargeTitleTextStyle"
+                android:text="@string/auth_welcome_message"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/meduimTitleTextStyle"
+                android:text="@string/sign_mess"
+                />
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
 </layout>

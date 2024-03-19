@@ -1,7 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">E-CommerceProject</string>
-    <string name="login_fragment">login fragment</string>
+    <string name="login_fragment">الدخول الى </string>
     <string name="auth_welcome_message">Welcome to E-Commerce</string>
     <string name="sign_mess">Sign in to continue</string>
-
 </resources>
