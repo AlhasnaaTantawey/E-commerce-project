@@ -3,5 +3,14 @@
     <string name="login_fragment">login fragment</string>
     <string name="auth_welcome_message">Welcome to E-Commerce</string>
     <string name="sign_mess">Sign in to continue</string>
+    <string name="email_et_hint">Your Email</string>
+    <string name="password">password</string>
+    <string name="sign_in">sign in</string>
+    <string name="or">or</string>
+    <string name="login_with_google">login with google</string>
+    <string name="login_with_facebook">login with facebook</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="don_t_have_a_account">Don’t have a account?</string>
+    <string name="register">Register</string>
 
 </resources>

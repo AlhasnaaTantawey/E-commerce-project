@@ -1,43 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
+
         <variable
             name="viewmodel"
             type="com.example.e_commerceproject.ui.login.viewmodels.LoginViewModel" />
     </data>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
         <LinearLayout
-            android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="vertical">
 
             <ImageView
-                android:layout_marginTop="24dp"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_gravity="center"
-                android:src="@drawable/logo" />
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_primary_logo" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 style="@style/LargeTitleTextStyle"
-                android:text="@string/auth_welcome_message"
-                />
-
-            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/meduimTitleTextStyle"
-                android:text="@string/sign_mess"
+                android:text="@string/auth_welcome_message" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/MeduimTitleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/sign_mess" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/fragment_login_et_email"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="36dp"
+                android:drawableStart="@drawable/ic_email"
+                android:hint="@string/email_et_hint" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/fragment_login_et_password"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_password"
+                android:hint="@string/password" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fragment_login_button_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+               style="@style/PrimaryButtonStyle"
+                android:text="@string/sign_in"/>
+<RelativeLayout
+    android:layout_marginTop="24dp"
+    android:layout_marginBottom="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_centerInParent="true"
+        android:background="@color/neutral_light"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <TextView
+        android:background="@color/white"
+        android:text="@string/or"
+        android:textColor="@color/neutral_grey"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:layout_centerInParent="true"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fragment_login_button_login_with_google"
+                android:text="@string/login_with_google"
+                android:drawableStart="@drawable/ic_google"
+             style="@style/LoginWithSocialmediaStyle"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fragment_login_button_login_with_face"
+                android:text="@string/login_with_facebook"
+                android:drawableStart="@drawable/ic_facebook"
+                android:layout_marginTop="8dp"
+                style="@style/LoginWithSocialmediaStyle"/>
+            
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fragment_login_textview_forgetpass"
+               style="@style/ForgetPasswordTextViewStyle"
+                android:text="@string/forget_password"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
                 />
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="8dp"
+    android:layout_height="wrap_content">
 
 
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/MeduimTitleTextStyle"
+        android:layout_marginEnd="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/don_t_have_a_account"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fragment_login_textview_register"
+        style="@style/ForgetPasswordTextViewStyle"
+        android:text="@string/register"
+        />
+
+</LinearLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
