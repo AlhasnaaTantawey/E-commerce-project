@@ -1,17 +1,10 @@
 package com.example.e_commerceproject.data.reposatory.user
 
-import android.content.Context
-import androidx.datastore.preferences.core.edit
-import com.example.e_commerceproject.data.datasource.datastore.DataStoreKeys
-import com.example.e_commerceproject.data.datasource.datastore.DataStoreKeys.IS_USER_LOGGED_IN
-import com.example.e_commerceproject.data.datasource.datastore.DataStoreKeys.USER_ID
 import com.example.e_commerceproject.data.datasource.datastore.UserPreferncesDataSource
-import com.example.e_commerceproject.data.datasource.datastore.dataStore
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
 
 class UserPreferenceReposatoryImpl(private val userPreferncesDataSource:
-                                   UserPreferncesDataSource) : UserReposatryInterface {
+                                   UserPreferncesDataSource) : UserPrefernceReposatory {
     override suspend fun isUserLoggedIn(): Flow<Boolean> {
       return  userPreferncesDataSource.isUserLoggedIn
     }

@@ -69,8 +69,22 @@ dependencies {
     // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:32.7.3"))
     implementation("com.google.firebase:firebase-analytics")
+
+    //firebase dependancies
+
     //crashlytics dependancy
     implementation("com.google.firebase:firebase-crashlytics")
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
+    // Add the dependency for the Firebase SDK for Google Analytics
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-auth-ktx")
+    //sign in with google
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
+
+
+
 
     // lib  is used to check in android if user not open internent and this is not apper in android bcZ it is in google play now
     implementation ("com.github.pwittchen:reactivenetwork-rx2:3.0.8")
@@ -82,6 +96,9 @@ dependencies {
 
     // Feature module Support
     implementation("androidx.navigation:navigation-dynamic-features-fragment:2.7.7")
+
+
+
 
 
 

@@ -2,7 +2,7 @@ package com.example.e_commerceproject.data.reposatory.user
 
 import kotlinx.coroutines.flow.Flow
 
-interface UserReposatryInterface {
+interface UserPrefernceReposatory {
 
 
    suspend fun  isUserLoggedIn() : Flow<Boolean>

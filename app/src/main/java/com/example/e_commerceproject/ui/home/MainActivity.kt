@@ -17,7 +17,7 @@ import com.example.e_commerceproject.R
 import com.example.e_commerceproject.data.datasource.datastore.UserPreferncesDataSource
 import com.example.e_commerceproject.data.reposatory.user.UserPreferenceReposatoryImpl
 import com.example.e_commerceproject.ui.common.viewmodel.UserViewModel
-import com.example.e_commerceproject.ui.login.AuthActivity
+import com.example.e_commerceproject.ui.auth.AuthActivity
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -32,22 +32,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         initSplashScreen()
         super.onCreate(savedInstanceState)
-        Log.d(Tag, "onCreate : isLoggedIn :")
         lifecycleScope.launch(Main) {
             var isLoggedIn = userViewModel.IsUserLoggedIn().first()
-            Log.d(Tag, "onCreate : isLoggedIn :$isLoggedIn ")
+
             if (isLoggedIn) {//true
                 setContentView(R.layout.activity_main)
-            } else {
-               userViewModel.setIsLoggedIn(true)
-                goAuthActivity()
             }
+            else{//false
+                goAuthActivity()
+                userViewModel.setIsLoggedIn(isLoggedIn.not())
+            }
+
         }
 
     }
 
     private fun goAuthActivity() {
-        val intent = Intent(this, AuthActivity::class.java).apply {
+        val intent = Intent(this, AuthActivity::class.java)
+            .apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
         val options = ActivityOptions.makeCustomAnimation(
@@ -55,6 +57,7 @@ class MainActivity : AppCompatActivity() {
             android.R.anim.fade_in,
             android.R.anim.fade_out
         )
+        startActivity(intent)
 
     }
 

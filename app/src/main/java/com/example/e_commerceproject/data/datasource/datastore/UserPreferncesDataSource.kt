@@ -12,10 +12,8 @@ import kotlinx.coroutines.flow.map
 
 class UserPreferncesDataSource(private val context:Context) {
 
-    //create file ecommerce prefernce
-   private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = ECOMMERCE_PREFERENCES)
 
-     val isUserLoggedIn: Flow<Boolean> = context.dataStore.data.map { prefernces ->
+    val isUserLoggedIn: Flow<Boolean> = context.dataStore.data.map { prefernces ->
             prefernces[DataStoreKeys.IS_USER_LOGGED_IN] ?: false
     }
 
@@ -25,13 +23,13 @@ class UserPreferncesDataSource(private val context:Context) {
     }
 
      suspend fun saveloginState(isLoggedIn: Boolean) {
-        context.dataStore.edit{ prefernces ->
+         context.dataStore.edit{ prefernces ->
             prefernces[DataStoreKeys.IS_USER_LOGGED_IN]=isLoggedIn
         }
     }
 
      suspend fun saveUserId(userId: String) {
-        context.dataStore.edit{ prefernces ->
+         context.dataStore.edit{ prefernces ->
             prefernces[DataStoreKeys.USER_ID]=userId
         }
     }
