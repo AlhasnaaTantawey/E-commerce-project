@@ -1,5 +1,6 @@
 package com.example.e_commerceproject.data.reposatory.auth
 
+import android.util.Log
 import com.example.e_commerceproject.data.models.Resource
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.flow.Flow
@@ -15,6 +16,8 @@ class FirebaseAuthReposatoryImpl(val auth :FirebaseAuth =FirebaseAuth.getInstanc
           emit(Resource.Loading())
          val authResult= auth.signInWithEmailAndPassword(email,password).await()
             authResult.user?.let { user->
+                Log.d(TAG, "loginWithEmailAndPassword:${user.uid} ")
+
                 emit(Resource.Success(user.uid))
 
             } ?: run {
@@ -25,5 +28,8 @@ class FirebaseAuthReposatoryImpl(val auth :FirebaseAuth =FirebaseAuth.getInstanc
            emit(Resource.Error(e))
 
        }
+    }
+    companion object{
+        private  const val TAG ="FirebaseAuthReposatoryImpl"
     }
 }

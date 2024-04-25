@@ -12,4 +12,12 @@ sealed class Resource <T>(
     class Loading<T>(data: T?=null) :Resource<T>(data)
 
     class Error<T>(message :Exception,data: T?=null) :Resource<T>(data , message)
+
+    override fun toString(): String {
+        return when(this){
+            is Success -> "sucess [data =$data]"
+            is Loading -> "loading [data=$data]"
+            is Error   -> "error [ eceeption =${exception } , data=$data]"
+        }
+    }
 }
